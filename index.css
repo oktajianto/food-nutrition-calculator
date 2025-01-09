@@ -126,4 +126,7 @@ tr:nth-child(odd) {
         align-items: center;
         text-align: center;
     }
+    .loader{
+        margin: auto;
+    }
 }
