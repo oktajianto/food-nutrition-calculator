@@ -65,51 +65,63 @@ imgfood.addEventListener('load',function () {
     document.getElementById('loadimg').removeAttribute('class');
 })
 function calculate() {
-    var satuannew='gram';
-    var satuannewkalori='Calories';
-    var fixjumlah=jumlah.value;
-    var fixkalori=(fixjumlah/100)*datapilih.kalori;
-
-    if (satuanold!=satuan.value) {
-        if (satuan.value=='gram'&&satuanold=='mL'||satuan.value=='mL'&&satuanold=='gram') {
-            satuanold,satuannew='gram';
-            if (satuan.value=='mL') {
-                satuanold,satuannew='mL';
-                
+    if (pilihmakanan.value=='Choose Food') {
+        Swal.fire({
+           
+            icon: "error",
+            title: "",
+            text:'Please choose the food first',
+            showConfirmButton: false,
+            timer: 2500
+          });
+    }else{
+        var satuannew='gram';
+        var satuannewkalori='Calories';
+        var fixjumlah=jumlah.value;
+        var fixkalori=(fixjumlah/100)*datapilih.kalori;
+    
+        if (satuanold!=satuan.value) {
+            if (satuan.value=='gram'&&satuanold=='mL'||satuan.value=='mL'&&satuanold=='gram') {
+                satuanold,satuannew='gram';
+                if (satuan.value=='mL') {
+                    satuanold,satuannew='mL';
+                    
+                }
+                fixkalori=(fixjumlah/100)*datapilih.kalori;
+            }else if(satuan.value=='kilogram'&&satuanold=='mL'||satuan.value=='kilogram'&&satuanold=='gram'){
+                satuanold,satuannew='kilogram';
+                satuannewkalori='kCal';
+                fixjumlah=fixjumlah/1000;
+                fixkalori=(Math.round((fixjumlah/100)*datapilih.kalori*100)/100).toFixed(3);
+            }else{
+                satuanold,satuannew='gram';
+                if (satuan.value=='mL') {
+                    satuanold,satuannew='mL';
+                }
+                satuannewkalori='Calories';
+                fixjumlah=fixjumlah*1000;
+                fixkalori=(fixjumlah/100)*datapilih.kalori;
             }
-            fixkalori=(fixjumlah/100)*datapilih.kalori;
-        }else if(satuan.value=='kilogram'&&satuanold=='mL'||satuan.value=='kilogram'&&satuanold=='gram'){
-            satuanold,satuannew='kilogram';
-            satuannewkalori='kCal';
-            fixjumlah=fixjumlah/1000;
-            fixkalori=(Math.round((fixjumlah/100)*datapilih.kalori*100)/100).toFixed(3);
-        }else{
-            satuanold,satuannew='gram';
-            if (satuan.value=='mL') {
-                satuanold,satuannew='mL';
-            }
-            satuannewkalori='Calories';
-            fixjumlah=fixjumlah*1000;
-            fixkalori=(fixjumlah/100)*datapilih.kalori;
         }
+       
+    
+        keterangan.innerHTML =`${fixjumlah} ${satuannew} of ${pilihmakanan.value} contain:`;
+    
+    
+        kalori.innerHTML=fixkalori;
+        karbonhidrat.innerHTML=(fixjumlah/100)*datapilih.karbonhidrat;
+        lemak.innerHTML=(fixjumlah/100)*datapilih.lemak;
+        protein.innerHTML=(fixjumlah/100)*datapilih.protein;
+    
+        var dataelemensatuan=['kalori-unit','karbonhidrat-unit','lemak-unit','protein-unit'];
+    
+        dataelemensatuan.forEach(element => {
+            if (element=='kalori-unit') {
+                document.getElementById(element).innerHTML=satuannewkalori;
+            }else{document.getElementById(element).innerHTML=satuannew;}
+            
+        });
     }
-   
-
-    keterangan.innerHTML =`${fixjumlah} ${satuannew} of ${pilihmakanan.value} contain:`;
-
-
-    kalori.innerHTML=fixkalori;
-    karbonhidrat.innerHTML=(fixjumlah/100)*datapilih.karbonhidrat;
-    lemak.innerHTML=(fixjumlah/100)*datapilih.lemak;
-    protein.innerHTML=(fixjumlah/100)*datapilih.protein;
-
-    var dataelemensatuan=['kalori-unit','karbonhidrat-unit','lemak-unit','protein-unit'];
-
-    dataelemensatuan.forEach(element => {
-        if (element=='kalori-unit') {
-            document.getElementById(element).innerHTML=satuannewkalori;
-        }else{document.getElementById(element).innerHTML=satuannew;}
-        
-    });
+    
 
 }
