@@ -37,7 +37,9 @@ document.addEventListener("DOMContentLoaded", async function () {
 
 });
 function foodklik(e) {
+    imgfood.style.display='none';
     document.getElementById('loadimg').className='loader';
+    
     datas.forEach(element => {
         if (element.id==e.value) {
             datapilih=element;
@@ -63,6 +65,7 @@ function foodklik(e) {
 }
 imgfood.addEventListener('load',function () {
     document.getElementById('loadimg').removeAttribute('class');
+    imgfood.removeAttribute('style');
 })
 function calculate() {
     if (pilihmakanan.value=='Choose Food') {
