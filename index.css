@@ -1,0 +1,129 @@
+body {
+    background: #FFA843;
+}
+
+.container {
+    background: white;
+    height: 100%;
+    border-radius: 15px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    align-items: center;
+}
+
+#imgis {
+    width: 20%;
+}
+#pilihmakanan {
+    text-transform: capitalize;
+}
+#pilihmakanan option {
+    text-transform: capitalize;
+}
+.tableFixHead {
+    overflow: auto;
+   
+}
+.tableFixHead thead th {
+    background-color: #ffd905;
+    color: black;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    padding: 8px 16px;
+    text-align: center;word-wrap: break-word;
+}
+
+th {
+    background: white;
+}
+
+.table-hover>tbody>tr:hover>td,
+.table-hover>tbody>tr:hover>th {
+    background-color: #04209a34 !important;
+    color: black !important;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+tr:nth-child(odd) {
+    background-color: #ccebcd;
+}
+
+.loader {
+    width: 60px;
+    aspect-ratio: 1;
+    color: #ffa516;
+    background:
+        linear-gradient(currentColor 0 0) 100% 0,
+        linear-gradient(currentColor 0 0) 0 100%;
+    background-size: 50.1% 50.1%;
+    background-repeat: no-repeat;
+    animation: l7-0 1s infinite steps(1);
+}
+
+.loader::before,
+.loader::after {
+    content: "";
+    position: absolute;
+    inset: 0 50% 50% 0;
+    background: currentColor;
+    transform: scale(var(--s, 1)) perspective(150px) rotateY(0deg);
+    transform-origin: bottom right;
+    animation: l7-1 .5s infinite linear alternate;
+}
+
+.loader::after {
+    --s: -1, -1;
+}
+
+@keyframes l7-0 {
+    0% {
+        transform: scaleX(1) rotate(0deg)
+    }
+
+    50% {
+        transform: scaleX(-1) rotate(-90deg)
+    }
+}
+
+@keyframes l7-1 {
+    49.99% {
+        transform: scale(var(--s, 1)) perspective(150px) rotateX(-90deg);
+        filter: grayscale(0)
+    }
+
+    50% {
+        transform: scale(var(--s, 1)) perspective(150px) rotateX(-90deg);
+        filter: grayscale(0.8)
+    }
+
+    100% {
+        transform: scale(var(--s, 1)) perspective(150px) rotateX(-180deg);
+        filter: grayscale(0.8)
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #imgis {
+        width: 50%;
+    }
+
+    table {
+        font-size: 12px;
+    }
+    #showket{
+        align-items: center;
+        text-align: center;
+    }
+}

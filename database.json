@@ -1,0 +1,103 @@
+[
+    {
+        "id":"apple",
+        "kalori":"52",
+        "karbonhidrat":"14",
+        "lemak":"0.2",
+        "protein":"0.3",
+        "reference":"https://www.nutritionix.com/food/apple/100-g",
+        "image":"https://nix-tag-images.s3.amazonaws.com/384_thumb.jpg"
+
+    },
+    {
+        "id":"banana",
+        "kalori":"89",
+        "karbonhidrat":"23",
+        "lemak":"0.3",
+        "protein":"1.1",
+        "reference":"https://www.nutritionix.com/food/banana/100-g",
+        "image":"https://nix-tag-images.s3.amazonaws.com/399_thumb.jpg"
+
+    },
+    {
+        "id":"chicken",
+        "kalori":"220",
+        "karbonhidrat":"0.1",
+        "lemak":"13",
+        "protein":"24",
+        "reference":"https://www.nutritionix.com/food/chicken/100-g",
+        "image":"https://nix-tag-images.s3.amazonaws.com/9_thumb.jpg"
+
+    },
+    {
+        "id":"fish",
+        "kalori":"128",
+        "karbonhidrat":"0",
+        "lemak":"2.7",
+        "protein":"26",
+        "reference":"https://www.nutritionix.com/food/fish/100-g",
+        "image":"https://nix-tag-images.s3.amazonaws.com/10_thumb.jpg"
+
+    },
+    {
+        "id":"grape",
+        "kalori":"69",
+        "karbonhidrat":"18",
+        "lemak":"0.2",
+        "protein":"0.7",
+        "reference":"https://www.nutritionix.com/food/grape/100-g",
+        "image":"https://nix-tag-images.s3.amazonaws.com/586_thumb.jpg"
+
+    },
+    {
+        "id":"orange",
+        "kalori":"49",
+        "karbonhidrat":"13",
+        "lemak":"0.2",
+        "protein":"0.9",
+        "reference":"https://www.nutritionix.com/food/orange/100-g",
+        "image":"https://nix-tag-images.s3.amazonaws.com/719_thumb.jpg"
+
+    },
+    {
+        "id":"rice",
+        "kalori":"130",
+        "karbonhidrat":"28",
+        "lemak":"0.3",
+        "protein":"2.7",
+        "reference":"https://www.nutritionix.com/food/rice/100-g",
+        "image":"https://nix-tag-images.s3.amazonaws.com/784_thumb.jpg"
+
+    },
+    {
+        "id":"tofu",
+        "kalori":"83",
+        "karbonhidrat":"1.2",
+        "lemak":"5.3",
+        "protein":"10",
+        "reference":"https://www.nutritionix.com/food/tofu/100-g",
+        "image":"https://nix-tag-images.s3.amazonaws.com/850_thumb.jpg"
+
+    },
+    {
+        "id":"tempeh",
+        "kalori":"195",
+        "karbonhidrat":"7.6",
+        "lemak":"11",
+        "protein":"20",
+        "reference":"https://www.nutritionix.com/food/tempeh/100-g",
+        "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Sliced_tempeh.jpg/250px-Sliced_tempeh.jpg"
+
+    },
+    {
+        "id":"wheat",
+        "kalori":"329",
+        "karbonhidrat":"68",
+        "lemak":"1.9",
+        "protein":"15",
+        "reference":"https://www.nutritionix.com/food/wheat/100-g",
+        "image":"https://nix-tag-images.s3.amazonaws.com/3608_thumb.jpg"
+
+    }
+
+]

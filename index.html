@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kalkulator nutrisi makanan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.15.10/dist/sweetalert2.min.css
+" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <section style="margin-left: 25px;margin-right: 25px;vertical-align: middle;">
+        <div class="container pt-4 pb-4">
+            <div style="align-items: center;text-align: center;">
+                <img src="/assets/g1.png" alt="" id="imgis">
+               
+                
+            </div>
+            <h3 style="text-align: center;">Food Nutrition Calculator</h3>
+            <div class="row">
+                <div class="col-sm-6 col-md-5 col-lg-8 pt-2" >
+                    <label for="pilihmakanan" class="form-label"><i class="bi bi-egg-fried"></i> Food Type</label>
+                    <select class="form-select form-select-sm" aria-label="pilihmakanan"
+                        id="pilihmakanan" onchange="foodklik(this)">
+                        <option selected disabled style="color: rgba(138, 138, 138, 0.63);">Choose Food
+                        </option>
+                        <!-- <option>Apple</option>
+                        <option>Kiwi</option>
+                        <option>Banana</option> -->
+                        
+            
+            
+                    </select>
+                </div>
+                <div  class="col-sm-6 col-md-5 col-lg-2 pt-2">
+                    <label for="jumlah" class="form-label"><i class="bi bi-123"></i> Amount</label>
+                    <input id="jumlah" type="number" class="form-control form-control-sm" placeholder="0" aria-label="Server" min="0" value="100">
+                </div>
+                <div class="col-sm-6 col-md-5 col-lg-2 pt-2">
+                    <label for="satuan" class="form-label"><i class="bi bi-rulers"></i> Unit</label>
+                    <select class="form-select form-select-sm" aria-label="satuan"
+                        id="satuan">
+                        <option selected>kilogram</option>
+                        <option selected>gram</option>
+                        <option>mL</option>
+                        
+            
+            
+                    </select>
+                </div>
+    
+            </div>
+            <div style="text-align: center;margin-top: 25px;">
+                <button type="button" class="btn btn-primary" onclick="calculate()"><i class="bi bi-calculator-fill"></i> Calculate</button>
+            </div>
+            <div style="margin-top: 25px;width: 100%;">
+                <div id="showket" style="display: none;">
+                    <div id="loadimg" class="loader">
+                        <img src="" alt="" id="imgfood">
+                    </div>
+                    <br>
+                    <p id="keterangan">100 grams of apple contain:</p>
+                </div>
+                <div class="tableFixHead">
+                    <table  class="table table-hover" >
+                        <thead>
+                            <th>Nutrition</th>
+                            <th>Amount</th>
+                            <th>Unit</th>
+                        </thead>
+                        <tr>
+                            <td>Calories</td>
+                            <td id="kalori">0</td>
+                            <td id="kalori-unit">Calories</td>
+                        </tr>
+                        <tr>
+                            <td>Carbohydrates</td>
+                            <td id="karbonhidrat">0</td>
+                            <td id="karbonhidrat-unit">gram</td>
+                        </tr>
+                        <tr>
+                            <td>Fats</td>
+                            <td id="lemak">0</td>
+                            <td id="lemak-unit">gram</td>
+                        </tr>
+                        <tr>
+                            <td>Proteins</td>
+                            <td id="protein">0</td>
+                            <td id="protein-unit">gram</td>
+                        </tr>
+                    </table>
+                </div>
+               
+               
+                <br>
+                <div style="word-wrap: break-word;">
+                    <span id="reference" style="display: none;">Reference : <a href="" target="_blank" id="linkreference"></a> </span>
+                </div>
+                <br>
+                <b style="font-size: small;">Note</b>
+                <br>
+                <span style="font-size: small;">1 kg = 1000 gram</span>
+                <br>
+                <span style="font-size: small;">1 kCal = 1000 Calories</span>
+                <p style="font-size: small;">1 gram = 1 mL</p>
+            </div>
+            
+        
+        </div>
+    </section>
+
+   
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <script src="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.15.10/dist/sweetalert2.all.min.js
+"></script>
+    <script src="/index.js"></script>
+</body>
+</html>
