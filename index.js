@@ -19,7 +19,7 @@ var lemak =document.getElementById("lemak");
 var protein=document.getElementById("protein");
 
 document.addEventListener("DOMContentLoaded", async function () {
-    
+    pilihmakanan.value='Choose Food';
     let myObject = await fetch("database.json").then((res) => {
         
         return res.json();
