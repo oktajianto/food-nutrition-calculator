@@ -61,6 +61,7 @@ tr:nth-child(odd) {
 }
 
 .loader {
+    margin: auto;
     width: 60px;
     aspect-ratio: 1;
     color: #ffa516;
@@ -113,7 +114,14 @@ tr:nth-child(odd) {
         filter: grayscale(0.8)
     }
 }
-
+#showket{
+    align-items: center;
+    text-align: center;
+}
+#createdby{
+    text-align: right;
+    margin-top: 50px;
+}
 @media screen and (max-width: 768px) {
     #imgis {
         width: 50%;
@@ -122,11 +130,7 @@ tr:nth-child(odd) {
     table {
         font-size: 12px;
     }
-    #showket{
-        align-items: center;
-        text-align: center;
-    }
-    .loader{
-        margin: auto;
+    #createdby{
+        text-align: left;
     }
 }
