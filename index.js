@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
 });
 function foodklik(e) {
-    
+    document.getElementById('loadimg').className='loader';
     datas.forEach(element => {
         if (element.id==e.value) {
             datapilih=element;
