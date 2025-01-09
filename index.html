@@ -13,7 +13,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.15.10/dist/sweetalert2.min.css
 <link rel="stylesheet" href="/index.css">
 </head>
 <body>
-    <section style="margin-left: 25px;margin-right: 25px;vertical-align: middle;"  class="  d-flex 
+    <section style="margin-left: 25px;margin-right: 25px;vertical-align: middle;" class="d-flex 
     align-items-center 
     justify-content-center 
     min-vh-100">
@@ -60,60 +60,82 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.15.10/dist/sweetalert2.min.css
             <div style="text-align: center;margin-top: 25px;">
                 <button type="button" class="btn btn-primary" onclick="calculate()"><i class="bi bi-calculator-fill"></i> Calculate</button>
             </div>
-            <div style="margin-top: 25px;width: 100%;">
-                <div id="showket" style="display: none;">
-                    <div id="loadimg" class="loader">
-                        <img src="" alt="" id="imgfood">
+            <div style="margin-top: 25px;width: 100%;">              
+                <div id="showket" style="display: none;" class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-4">
+                        <div id="loadimg" class="loader">
+                            <img src="" alt="" id="imgfood">
+                        </div>
+                        <br>
+                        <p id="keterangan">100 grams of apple contain:</p>
                     </div>
-                    <br>
-                    <p id="keterangan">100 grams of apple contain:</p>
+                    <div class="col-sm-12 col-md-12 col-lg-8">
+                        <div class="tableFixHead">
+                            <table  class="table table-hover" >
+                                <thead>
+                                    <th>Nutrition</th>
+                                    <th>Amount</th>
+                                    <th>Unit</th>
+                                </thead>
+                                <tr>
+                                    <td>Calories</td>
+                                    <td id="kalori">0</td>
+                                    <td id="kalori-unit">Calories</td>
+                                </tr>
+                                <tr>
+                                    <td>Carbohydrates</td>
+                                    <td id="karbonhidrat">0</td>
+                                    <td id="karbonhidrat-unit">gram</td>
+                                </tr>
+                                <tr>
+                                    <td>Fats</td>
+                                    <td id="lemak">0</td>
+                                    <td id="lemak-unit">gram</td>
+                                </tr>
+                                <tr>
+                                    <td>Proteins</td>
+                                    <td id="protein">0</td>
+                                    <td id="protein-unit">gram</td>
+                                </tr>
+                            </table>
+                        </div>
+                       
+                    </div>
                 </div>
-                <div class="tableFixHead">
-                    <table  class="table table-hover" >
-                        <thead>
-                            <th>Nutrition</th>
-                            <th>Amount</th>
-                            <th>Unit</th>
-                        </thead>
-                        <tr>
-                            <td>Calories</td>
-                            <td id="kalori">0</td>
-                            <td id="kalori-unit">Calories</td>
-                        </tr>
-                        <tr>
-                            <td>Carbohydrates</td>
-                            <td id="karbonhidrat">0</td>
-                            <td id="karbonhidrat-unit">gram</td>
-                        </tr>
-                        <tr>
-                            <td>Fats</td>
-                            <td id="lemak">0</td>
-                            <td id="lemak-unit">gram</td>
-                        </tr>
-                        <tr>
-                            <td>Proteins</td>
-                            <td id="protein">0</td>
-                            <td id="protein-unit">gram</td>
-                        </tr>
-                    </table>
-                </div>
-               
-               
                 <br>
                 <div style="word-wrap: break-word;">
                     <span id="reference" style="display: none;">Reference : <a href="" target="_blank" id="linkreference"></a> </span>
                 </div>
-                <br>
-                <b style="font-size: small;">Note</b>
-                <br>
-                <span style="font-size: small;">1 kg = 1000 gram</span>
-                <br>
-                <span style="font-size: small;">1 kCal = 1000 Calories</span>
-                <p style="font-size: small;">1 gram = 1 mL</p>
+                
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-6">
+                        
+                        <br>
+                        <b style="font-size: small;">Note</b>
+                        <br>
+                        <span style="font-size: small;">1 kg = 1000 gram</span>
+                        <br>
+                        <span style="font-size: small;">1 kCal = 1000 Calories</span>
+                        <p style="font-size: small;">1 gram = 1 mL</p>
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-6" id="createdby">
+                        
+                        <div>
+                            <p style="font-size: small;">Food Nutrition Calculator</p>
+                            <p style="font-size: small;">09/01/2025</p>
+                            <p style="font-size: small;">Created by Hammam Oktajianto</p>
+                        </div>
+                    </div>
+                </div>
+                
+
+
             </div>
+            
             
         
         </div>
+      
     </section>
 
    
